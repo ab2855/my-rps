@@ -1,12 +1,16 @@
-"""RPS-001: the rules students will build with AI. See SPEC.md."""
+"""Game logic module for Rock, Paper, Scissors."""
 
 
-# The required interface stays unused until students implement the rules.
-# pylint: disable-next=unused-argument
-def determine_winner(player: str, computer: str) -> str:
-    """Return 'win', 'lose', or 'tie' from the player's perspective.
-
-    The supplied web page accepts only 'rock', 'paper', and 'scissors'.
-    Agree on the expected results in SPEC.md before implementing this function.
+def determine_winner(player_choice, computer_choice):
+    """Determine the winner of a Rock, Paper,
+    Scissors round from the player's perspective.
     """
-    raise NotImplementedError("RPS-001: game rules are not built yet")
+    valid_choices = ["rock", "paper", "scissors"]
+    if player_choice not in valid_choices or computer_choice not in valid_choices:
+        raise ValueError("Invalid choice.")
+    if player_choice == computer_choice:
+        return "tie"
+    winning_combos = {("rock", "scissors"), ("scissors", "paper"), ("paper", "rock")}
+    if (player_choice, computer_choice) in winning_combos:
+        return "win"
+    return "lose"
