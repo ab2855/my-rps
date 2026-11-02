@@ -44,7 +44,7 @@ Use `unit`, `integration`, and `e2e` pytest markers. Run `.venv/bin/python check
 
 ### Work record
 
-- Issue: add your own issue URL.
-- Pull request / CI: add actual URLs when they exist.
-- Implementation: **Not implemented.** The shell is supplied; `game.py` is unfinished.
+- Issue: https://github.com/ab2855/my-rps/issues/1
+- Pull request / CI: Will update after creating PR
+- Implementation: **Not implemented.** In progress - logic planned, test plan established.
 - Checks: **Rules not verified.** Supplied request/browser tests cover the shell only. After implementation, record actual full-check results and your browser observations here; put detailed results in the PR. Passing formatting and analysis alone is not evidence of correct rules.
